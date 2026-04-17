@@ -17,6 +17,10 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @GetMapping("/test")
+    public String test() {
+        return "HELLO_DEPLOY_TEST";
+    }
     // Create a new student profile
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {
